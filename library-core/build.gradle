@@ -29,16 +29,16 @@ android {
 dependencies {
     //CardView
     //noinspection GradleCompatible
-    implementation 'com.android.support:cardview-v7:28.0.0'
+    api 'com.android.support:cardview-v7:28.0.0'
 
     //Support lib
-    implementation 'com.android.support:support-v4:28.0.0'
+    api 'com.android.support:support-v4:28.0.0'
 
     //Annotation
-    implementation 'com.android.support:support-annotations:28.0.0'
-    implementation 'com.survivingwithandroid:weatherlib:1.6.0'
-    implementation 'com.survivingwithandroid:weatherlib_volleyclient:1.6.0'
-    implementation 'com.mcxiaoke.volley:library:1.0.6@aar'
+    api 'com.android.support:support-annotations:28.0.0'
+    api 'com.survivingwithandroid:weatherlib:1.6.0'
+    api 'com.survivingwithandroid:weatherlib_volleyclient:1.6.0'
+    api 'com.mcxiaoke.volley:library:1.0.6@aar'
 }
 
 // Used to update in Maven

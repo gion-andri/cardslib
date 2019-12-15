@@ -28,10 +28,10 @@ android {
 
 dependencies {
     // Cards Library
-    implementation project(':library-core')
+    api project(':library-core')
 
     //Annotation
-    implementation 'com.android.support:support-annotations:28.0.0'
+    api 'com.android.support:support-annotations:28.0.0'
 }
 
 // Used to update in Maven
