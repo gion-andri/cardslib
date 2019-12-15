@@ -8,7 +8,6 @@ repositories {
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion 16
@@ -21,16 +20,22 @@ android {
     lintOptions {
         abortOnError false
     }
+
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+        options.addStringOption('charSet', 'UTF-8')
+    }
 }
 
 dependencies {
     // Cards Library
-    compile project(':library-core')
-    compile project(':library-recyclerview')
+    implementation project(':library-core')
+    implementation project(':library-recyclerview')
 
     //Twowayview
-    compile 'org.lucasr.twowayview:core:1.0.0-SNAPSHOT@aar'
-    compile 'org.lucasr.twowayview:layouts:1.0.0-SNAPSHOT@aar'
+    implementation 'org.lucasr.twowayview:core:1.0.0-SNAPSHOT@aar'
+    implementation 'org.lucasr.twowayview:layouts:1.0.0-SNAPSHOT@aar'
 
 }
 

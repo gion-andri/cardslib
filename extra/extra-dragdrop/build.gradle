@@ -6,7 +6,6 @@ repositories {
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion 16
@@ -19,15 +18,21 @@ android {
     lintOptions {
         abortOnError false
     }
+
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+        options.addStringOption('charSet', 'UTF-8')
+    }
 }
 
 dependencies {
     // Cards Library
-    compile project(':library-core')
+    implementation project(':library-core')
 
     //DynamicList
-    compile ('com.nhaarman.listviewanimations:lib-core:3.1.0')
-    compile ('com.nhaarman.listviewanimations:lib-manipulation:3.1.0')
+    implementation ('com.nhaarman.listviewanimations:lib-core:3.1.0')
+    implementation ('com.nhaarman.listviewanimations:lib-manipulation:3.1.0')
 }
 
 // Used to update in Maven
